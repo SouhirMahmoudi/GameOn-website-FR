@@ -32,13 +32,14 @@ img {
 
 .topnav {
   overflow: hidden;
-  margin: 3.5%;
+  /* margin: 3.5%;*/
+  margin: 3.5% 0% 3.5% 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -56,12 +57,14 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav .icon {
@@ -69,15 +72,23 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
+    color: red;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  img {
+    height: 20px;
+  }
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -90,16 +101,16 @@ img {
   }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
     margin-top: -15px;
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -108,11 +119,10 @@ main {
   padding-top: 0.5vw;
   padding-left: 2vw;
   padding-right: 2vw;
-  margin: 1px 20px 15px;
+  margin: 25px 17px 0px 25px;
+  /* margin: 1px 20px 15px;*/
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -157,12 +167,40 @@ main {
   font-size: 16px;
 }
 
+.page.validation{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 52px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+}
+
+.contenu{
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+  max-height: 667px;
+  height:100%;
+}
+
 .bground {
   display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  top: 0;
+  top: 52px;
   height: 100%;
   width: 100%;
   overflow: auto;
@@ -405,7 +443,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
+  min-height: 60vh;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -437,8 +475,8 @@ input[data-error]::after {
 }
 .hero-headline {
   font-size: 6rem;
-  font-weight: normal;
-  white-space: nowrap;
+  font-weight: bold;
+  /*white-space: normal;*/
 }
 .hero-text {
   width: 146%;
@@ -474,19 +512,33 @@ input[data-error]::after {
   display: none;
 }
 footer {
-  padding-left: 2vw;
-  padding-right: 2vw;
+  /* padding-left: 2vw;
+  padding-right: 2vw;*/
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+  body {
+    margin:5% 7% 0% 7%;
+  }
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  .topnav{
+    margin:0;
+    padding-top: 10px;
+  }
+  
   .hero-section {
     display: block;
     box-shadow: unset;
+    margin:0;
   }
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 20px;
+    padding: 0px;
+    min-width: 300px;
   }
   .hero-content::after {
     content: unset;
@@ -495,25 +547,30 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
-    white-space: normal;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    padding-top: 20px;
   }
   .hero-text {
     width: unset;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    margin-top:25px;
+    margin-bottom:35px;
   }
   .hero-img img {
     border-radius: 10px;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
   }
   .hero-section > .btn-signup {
     display: block;
-    margin: 32px auto 10px;
+    margin: 32px auto 0px;
     padding: 12px 35px;
+    font-size: 1rem;
   }
   .copyrights {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
+    font-size: 0.8rem;
   }
 }
 
@@ -526,4 +583,3 @@ footer {
     opacity: 1;
   }
 }
-
