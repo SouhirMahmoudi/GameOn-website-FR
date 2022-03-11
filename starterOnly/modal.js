@@ -34,7 +34,7 @@ var first = document.forms["reserve"]["first"];
 var last = document.forms["reserve"]["last"];
 var email = document.forms["reserve"]["email"];
 var quantity = document.forms["reserve"]["quantity"];
-var location = document.forms["reserve"]["location"];
+var lieuTournoi = document.forms["reserve"]["location"];
 var checkbox = document.forms ["reserve"]["checkbox1"];
 
 // valider les inputs nom, prenom , mail , nombre de tournoi
@@ -67,10 +67,10 @@ function showMessageValidation(dom, msg) {
   parent.setAttribute("data-error", msg);
 }
 
-//verifier si au moins un bouton radio est selectionnée pour location
+//verifier si au moins un bouton radio est selectionnée pour lieuTournoi
 function atLeastOnebutton() {
-  for(var i=0; i<location.length; i++) {
-  if( location[i].checked ) {
+  for(var i=0; i<lieuTournoi.length; i++) {
+  if( lieuTournoi[i].checked ) {
       return true;
   }
 }
