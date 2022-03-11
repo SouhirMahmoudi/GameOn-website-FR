@@ -78,14 +78,14 @@ return false;
 alert('Vous devez choisir une option!');
 }
 
-// verifier si le checkbox " J'ai lu et accepté les conditions d'utilisation" est selectionné
+// verifier si le checkbox "J'ai lu et accepté les conditions d'utilisation" est selectionné
 function isSelected(){
   if(checkbox.checked) { return true}
   return false;
   alert('Vous devez vérifier que vous acceptez les termes et conditions!')
 }
 
-//valider le formulaire
+//valider le formulaire  
 function validate() {
   event.stopPropagation();
   event.preventDefault();

@@ -11,14 +11,13 @@
 /* Landing Page */
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
-  margin: 0 auto;
+  /* margin: 0 auto;*/
 }
 
 p {
@@ -28,12 +27,13 @@ p {
 
 img {
   padding-right: 1rem;
+  height: 20px;
+  object-fit: cover;
 }
 
 .topnav {
   overflow: hidden;
-  /* margin: 3.5%;*/
-  margin: 3.5% 0% 3.5% 3.5%;
+  margin: 32px 29px 17px 29px;
 }
 .header-logo {
   float: left;
@@ -57,20 +57,22 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
-  text-decoration: underline;
 }
 
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
-  text-decoration: underline;
 }
 
 .topnav .icon {
   display: none;
 }
 
+.fa {
+  color: red;
+  font-size: 20px;
+}
 @media screen and (max-width: 768px) {
   .topnav a {
     display: none;
@@ -78,14 +80,10 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    color: red;
   }
 }
 
 @media screen and (max-width: 768px) {
-  img {
-    height: 20px;
-  }
   .topnav.responsive {
     position: relative;
   }
@@ -119,8 +117,7 @@ main {
   padding-top: 0.5vw;
   padding-left: 2vw;
   padding-right: 2vw;
-  margin: 25px 17px 0px 25px;
-  /* margin: 1px 20px 15px;*/
+  margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
 }
@@ -167,40 +164,12 @@ main {
   font-size: 16px;
 }
 
-.page.validation{
-    display: none;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 52px;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(26, 39, 156, 0.4);
-}
-
-.contenu{
-  margin: 5% auto;
-  width: 100%;
-  max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
-  background: #232323;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding-top: 10px;
-  max-height: 667px;
-  height:100%;
-}
-
 .bground {
   display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  top: 52px;
+  top: 0;
   height: 100%;
   width: 100%;
   overflow: auto;
@@ -443,7 +412,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 60vh;
+  min-height: 93vh;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -452,13 +421,13 @@ input[data-error]::after {
   margin-bottom: 10px;
 }
 .hero-content {
-  padding: 51px 67px;
+  /*padding: 51px 67px;*/
   grid-column: span 4;
   background: #232323;
   color: #fff;
   position: relative;
-  text-align: left;
-  min-width: 424px;
+  /* text-align: left;
+  min-width: 424px;*/
 }
 .hero-content::after {
   content: "";
@@ -474,14 +443,12 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 38px;
   font-weight: bold;
-  /*white-space: normal;*/
 }
 .hero-text {
-  width: 146%;
-  font-weight: normal;
-  margin-top: 57px;
+  /*width: 146%;*/
+  margin-top: 28px;
   padding: 0;
 }
 .btn-signup {
@@ -512,33 +479,19 @@ input[data-error]::after {
   display: none;
 }
 footer {
-  /* padding-left: 2vw;
-  padding-right: 2vw;*/
+  padding-left: 2vw;
+  padding-right: 2vw;
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
-  body {
-    margin:5% 7% 0% 7%;
-  }
-  main {
-    margin: 0;
-    padding: 0;
-  }
-  .topnav{
-    margin:0;
-    padding-top: 10px;
-  }
-  
   .hero-section {
     display: block;
     box-shadow: unset;
-    margin:0;
   }
   .hero-content {
     background: #fff;
     color: #000;
-    padding: 0px;
-    min-width: 300px;
+    /* padding: 20px;*/
   }
   .hero-content::after {
     content: unset;
@@ -547,30 +500,28 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 2.5rem;
-    white-space: nowrap;
-    padding-top: 20px;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: justify²;
   }
   .hero-text {
-    width: unset;
-    font-size: 0.9rem;
-    margin-top:25px;
-    margin-bottom:35px;
+    /* width: unset;*/
+    font-size: 11px;
+    width: 80%;
+    /* width:322px*/
   }
   .hero-img img {
     border-radius: 10px;
-    /*margin-top: 40px;*/
+    margin-top: 40px;
   }
   .hero-section > .btn-signup {
     display: block;
-    margin: 32px auto 0px;
+    margin: 32px auto 10px;
     padding: 12px 35px;
-    font-size: 1rem;
   }
   .copyrights {
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
-    font-size: 0.8rem;
   }
 }
 
