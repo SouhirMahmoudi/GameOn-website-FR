@@ -11,13 +11,14 @@
 /* Landing Page */
 
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
   background-image: url("background.png");
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
-  /* margin: 0 auto;*/
+  margin: 0 auto;
 }
 
 p {
@@ -27,13 +28,11 @@ p {
 
 img {
   padding-right: 1rem;
-  height: 20px;
-  object-fit: cover;
 }
 
 .topnav {
   overflow: hidden;
-  margin: 32px 29px 17px 29px;
+  margin: 3.5%;
 }
 .header-logo {
   float: left;
@@ -49,7 +48,7 @@ img {
   padding: 12px 12px;
   margin: 5px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Roboto, sans-serif;
 }
 
@@ -57,22 +56,20 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav a.active {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  text-decoration: underline;
 }
 
 .topnav .icon {
   display: none;
 }
 
-.fa {
-  color: red;
-  font-size: 20px;
-}
 @media screen and (max-width: 768px) {
   .topnav a {
     display: none;
@@ -112,9 +109,9 @@ img {
 
 main {
   font-size: 130%;
-  font-weight: bolder;
+  /* font-weight: bolder;*/
   color: black;
-  padding-top: 0.5vw;
+  /* padding-top: 0.5vw;*/
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 1px 20px 15px;
@@ -177,7 +174,7 @@ main {
 }
 
 .content {
-  margin: 5% auto;
+  margin: 17% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -412,7 +409,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
+  /* min-height: 93vh;*/
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -421,13 +418,13 @@ input[data-error]::after {
   margin-bottom: 10px;
 }
 .hero-content {
-  /*padding: 51px 67px;*/
+  padding: 51px 67px;
   grid-column: span 4;
   background: #232323;
   color: #fff;
   position: relative;
-  /* text-align: left;
-  min-width: 424px;*/
+  text-align: left;
+  min-width: 424px;
 }
 .hero-content::after {
   content: "";
@@ -443,28 +440,30 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 38px;
-  font-weight: bold;
+  font-size: 6rem;
+  font-weight: normal;
+  white-space: nowrap;
 }
 .hero-text {
-  /*width: 146%;*/
-  margin-top: 28px;
+  width: 146%;
+  font-weight: normal;
+  margin-top: 78px;
   padding: 0;
 }
 .btn-signup {
   outline: none;
   text-transform: capitalize;
   font-size: 1.3rem;
-  padding: 15px 23px;
+  padding: 13px 30px;
   margin: 0;
-  margin-top: 59px;
+  margin-top: 74px;
 }
 .hero-img {
   grid-column: span 8;
 }
 .hero-img img {
   width: 100%;
-  height: 100%;
+  height: 655px;
   display: block;
   padding: 0;
 }
@@ -483,14 +482,39 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+
 @media screen and (max-width: 800px) {
+
+  .hero-img img {
+    height: 100%;
+  }
+  main {
+    margin-bottom: px;
+  }
+  img {
+    height: 20px;
+    object-fit: cover;
+  }
+  .topnav {
+    overflow: hidden;
+    margin: 32px 29px 17px 29px;
+  }
+
+  .fa {
+    color: red;
+    font-size: 20px;
+  }
   .hero-section {
     display: block;
     box-shadow: unset;
+    min-height: none;
   }
   .hero-content {
     background: #fff;
     color: #000;
+    padding: 0px;
+    min-width: 0px;
+    text-align: justify;
     /* padding: 20px;*/
   }
   .hero-content::after {
@@ -500,27 +524,38 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 38px;
+    font-size: 42px;
     font-weight: bold;
     text-align: justify²;
+    white-space: normal;
   }
   .hero-text {
-    /* width: unset;*/
-    font-size: 11px;
-    width: 80%;
-    /* width:322px*/
+    width: 100%;
+    font-size: 14px;
+    margin-top: 24px;
+    padding: 0;
+    /* width: 80%;
+    width:322px*/
   }
   .hero-img img {
     border-radius: 10px;
     margin-top: 40px;
   }
+  .hero-section {
+    min-height: none;
+  }
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
-    padding: 12px 35px;
+    padding: 8px 32px 8px 32px;
+    font-size: 14px;
   }
+
   .copyrights {
-    margin-top: 50px;
+    padding: 0;
+    font-size: 10px;
+    margin: 0px 0 30px;
+    font-weight: bolder;
     text-align: center;
   }
 }
