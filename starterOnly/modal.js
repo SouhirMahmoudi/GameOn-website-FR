@@ -46,7 +46,7 @@ const location5 = document.forms["reserve"]["location5"];
 const location6 = document.forms["reserve"]["location6"];*/
 const checkbox = document.forms ["reserve"]["checkbox1"];
 
-// verifier si input nom est valide
+// verifier si input nom est valide 
 isNom()===false;
 function isNom(){
   const nomParent = first.parentNode;
@@ -106,7 +106,8 @@ function isMail(){
     return true;
   }
 }
-   // verifier si input date de naissance est valide
+   // verifier si input date de naissance est valide 
+
    function isDate(){
     const dateParent = $date.parentNode;
     const dateRegex = /[0-99]{1,2}/;
@@ -120,6 +121,8 @@ function isMail(){
       return true;
     }
    }
+
+
  
 // verifier si au moins un bouton radio est selectionnée pour location1
 function atLeastOnelocation(){
@@ -188,6 +191,9 @@ function CloseConfirmation() {
   modalbg.style.display = "none";
 }
  
+
+
+/*et que le joueur a moins de 70ans et plus de 18 ans 
 
 /*else{
 
