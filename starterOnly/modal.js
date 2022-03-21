@@ -132,7 +132,7 @@ function atLeastOnelocation(){
     if( lieuTournoi[i].checked === true) {
     locationChecked= true;
     locationParent.setAttribute ("data-error-visible", "false");
-    locationParent.setAttribute("data-error", "")
+    locationParent.setAttribute("data-error","")
     return true;
     break;
     }
