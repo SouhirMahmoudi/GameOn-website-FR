@@ -8,13 +8,12 @@
   margin: 0;
   padding: 0;
 }
-/* Landing Page */
 
+/* Landing Page */
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /*background-image: url("background.png");*/
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -109,9 +108,7 @@ img {
 
 main {
   font-size: 130%;
-  /* font-weight: bolder;*/
   color: black;
-  /* padding-top: 0.5vw;*/
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 1px 20px 15px;
@@ -260,12 +257,7 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -518,7 +510,7 @@ footer {
     height: 100%;
   }
   main {
-    margin-bottom: px;
+    margin-bottom:0px;
   }
   img {
     height: 20px;
@@ -544,7 +536,6 @@ footer {
     padding: 0px;
     min-width: 0px;
     text-align: justify;
-    /* padding: 20px;*/
   }
   .hero-content::after {
     content: unset;
@@ -555,7 +546,7 @@ footer {
   .hero-headline {
     font-size: 42px;
     font-weight: bold;
-    text-align: justify²;
+    text-align: justify;
     white-space: normal;
   }
   .hero-text {
@@ -563,8 +554,6 @@ footer {
     font-size: 14px;
     margin-top: 24px;
     padding: 0;
-    /* width: 80%;
-    width:322px*/
   }
   .hero-img img {
     border-radius: 10px;
