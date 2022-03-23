@@ -506,6 +506,10 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+
+  .bground {
+      background-color: transparent;
+  }
   .hero-img img {
     height: 100%;
   }
@@ -520,7 +524,6 @@ footer {
     overflow: hidden;
     margin: 32px 29px 17px 29px;
   }
-
   .fa {
     color: red;
     font-size: 20px;
