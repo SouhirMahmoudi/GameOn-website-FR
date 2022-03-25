@@ -41,7 +41,7 @@ const checkbox = document.forms ["reserve"]["checkbox1"];
 // verifier si input nom est valide 
 function isNom(){
     const nomParent = first.parentNode;
-    const nomRegex = /^[a-z-]{2,}$/gi;
+    const nomRegex = /^[a-z-]{2,}/gi;
     if ((nomRegex.test(first.value)) === false){
         nomParent.setAttribute ("data-error-visible", "true");
         nomParent.setAttribute("data-error","Veuillez entrer 2 caractères ou plus!");
@@ -56,7 +56,7 @@ function isNom(){
 // verifier si input prenom est valide
 function isPrenom(){
     const prenomParent = last.parentNode;
-    const prenomRegex = /^[a-z-]{2,}$/gi;
+    const prenomRegex = /^[a-z-]{2,}/gi;
     if ((prenomRegex.test(last.value)) === false){
         prenomParent.setAttribute ("data-error-visible", "true");
         prenomParent.setAttribute("data-error","Veuillez entrer 2 caractères ou plus!");
@@ -85,8 +85,9 @@ function isMail(){
 
 // verifier si input nombre de tournoi est valide
 function isQuantity(){
+    event.preventDefault();
     const quantityParent = quantity.parentNode;
-    const quantityRegex = /[0-99]{1,2}/;
+    const quantityRegex = /^[0-99]{1,2}$/;
     if ((quantityRegex.test(quantity.value)) === false){
         quantityParent.setAttribute ("data-error-visible", "true");
         quantityParent.setAttribute("data-error","Veuillez saisir un nombre de tournois");
@@ -162,7 +163,6 @@ function validate(){
         fermer.setAttribute("name","fermer");
         fermer.classList.add("fermer");  
         fermer.innerHTML = " fermer";
-
     }
     else 
         launchModal();
@@ -173,9 +173,8 @@ fermer.addEventListener("click", CloseConfirmation);
 function CloseConfirmation() {
     event.stopPropagation();
     event.preventDefault();
-    modalbg.style.display = "none";
+    modalbg.style.display = "none"; 
     document.forms["reserve"].reset();
-    
 }
  
 

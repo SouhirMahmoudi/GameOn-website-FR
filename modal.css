@@ -506,15 +506,14 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-
   .bground {
-      background-color: transparent;
+    background-color: transparent;
   }
   .hero-img img {
     height: 100%;
   }
   main {
-    margin-bottom:0px;
+    margin-bottom: 0px;
   }
   img {
     height: 20px;
@@ -549,7 +548,7 @@ footer {
   .hero-headline {
     font-size: 42px;
     font-weight: bold;
-    text-align: justify;
+    text-align: initial;
     white-space: normal;
   }
   .hero-text {
