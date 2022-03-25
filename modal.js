@@ -174,6 +174,8 @@ function CloseConfirmation() {
     event.stopPropagation();
     event.preventDefault();
     modalbg.style.display = "none";
+    document.forms["reserve"].reset();
+    
 }
  
 
