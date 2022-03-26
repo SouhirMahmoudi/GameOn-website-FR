@@ -530,7 +530,7 @@ footer {
   .hero-section {
     display: block;
     box-shadow: unset;
-    min-height: none;
+    /*min-height: none;*/
   }
   .hero-content {
     background: #fff;
@@ -561,9 +561,9 @@ footer {
     border-radius: 10px;
     margin-top: 40px;
   }
-  .hero-section {
-    min-height: none;
-  }
+ /* .hero-section {
+    /*min-height: none;
+  }*/
   .hero-section > .btn-signup {
     display: block;
     margin: 32px auto 10px;
